@@ -1,9 +1,9 @@
 import React from "react";
 import { styled } from "styled-components";
+import { Colors } from "../../theme";
+import Skeleton from "../Skeleton/Skeleton";
 import LogoRound from "../Svg/Icons/LogoRound";
 import Text from "../Text/Text";
-import Skeleton from "../Skeleton/Skeleton";
-import { Colors } from "../../theme";
 
 export interface Props {
   color?: keyof Colors;
