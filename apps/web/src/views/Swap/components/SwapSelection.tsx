@@ -16,7 +16,7 @@ export const SwapSelection = ({ swapType }: { swapType: SwapType }) => {
           url = '/swap/limit'
           break
         case SwapType.TWAP:
-          url = '/swap/twap'
+          url = '/mev'
           break
         case SwapType.MARKET:
           url = '/swap'
