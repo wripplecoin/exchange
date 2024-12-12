@@ -152,7 +152,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                 {/* {logoComponent ?? <Logo href={homeLink?.href ?? "/mev"} />} */}
                 <a href="/mev" style={{ display: "inline-block" }}>
                   <img
-                    src="http://wripple.net/static/img/wripple-logo-black.svg"
+                    src="/wripple-black.svg"
                     alt="Wripple Logo"
                     style={{
                       paddingTop: "2px",

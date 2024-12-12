@@ -33,22 +33,22 @@ const walletConfig = [
   {
     title: 'Trust Wallet',
     image: 'trust.png',
-    doc: 'https://community.trustwallet.com/t/how-to-add-a-custom-network-on-the-trust-wallet-mobile-app/626781',
+    doc: 'https://trustwallet.com/',
   },
   {
-    title: 'SafePal',
+    title: 'Bybit wallet',
     image: 'safepal.png',
-    doc: 'https://safepalsupport.zendesk.com/hc/en-us/articles/14688426876443-How-to-add-a-Custom-network-in-the-SafePal-software-wallet',
+    doc: 'https://bybit.com',
   },
   {
     title: 'Coinbase Wallet',
     image: 'coinbase.png',
-    doc: ' https://www.coinbase.com/en-sg/learn/wallet/How-to-add-custom-networks-Coinbase-Wallet',
+    doc: ' https://www.coinbase.com/',
   },
   {
-    title: 'TokenPocket',
+    title: 'Binance Wallet',
     image: 'token-pocket.png',
-    doc: 'https://help.tokenpocket.pro/en/wallet-operation/custom-network-token/how-to-add-custom-network',
+    doc: 'https://binance.com/',
   },
   {
     title: 'Others',
@@ -62,7 +62,7 @@ export const InfoSection: React.FC<{ walletCount: number }> = ({ walletCount }) 
   const { theme } = useTheme()
   const { isMobile } = useMatchBreakpoints()
   const walletCountDisplay = useMemo(() => {
-    if (walletCount < 126780) return '126,780'
+    if (walletCount < 126780) return '60,000+ Holder'
     return walletCount.toLocaleString()
   }, [walletCount])
 
@@ -75,11 +75,11 @@ export const InfoSection: React.FC<{ walletCount: number }> = ({ walletCount }) 
               {walletCountDisplay}
             </Text>
             <Text fontSize="40px" lineHeight="48px" textAlign="center" bold>
-              {t('Total onboarded addresses')}
+              {t('Total Holders addresses')}
             </Text>
           </Box>
           <Text textAlign="center">
-            {t('Having trouble? Choose your wallet to view the detailed guide on how to apply MEV Guard:')}
+            {t('Having trouble? Choose your wallet to view the detailed guide on how to safely HODL wXRP:')}
           </Text>
           <FlexGap
             maxWidth="588px"

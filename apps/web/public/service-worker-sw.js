@@ -8,8 +8,8 @@ self.addEventListener('push', function onPush(event) {
     // eslint-disable-next-line no-restricted-globals
     self.registration.showNotification(data.title, {
       body: data.body,
-      icon: 'https://wripple.net/logo.png',
-      image: 'https://wripple.net/logo.png',
+      icon: '/logo.png',
+      image: '/logo.png',
     }),
   )
 })

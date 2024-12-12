@@ -56,22 +56,17 @@ const CakePrice: React.FC<React.PropsWithChildren<Props>> = ({
 
   return cakePriceUsd ? (
     <PriceLink
-      href={`https://pancakeswap.finance/swap?outputCurrency=0xbbC9Fa4B395FeE68465C2Cd4a88cdE267a34ed2a&chainId=${chainId}`}
+      href={`/swap?outputCurrency=0xbbC9Fa4B395FeE68465C2Cd4a88cdE267a34ed2a&chainId=${chainId}`}
       target="_blank"
     >
-      <img
-        src="http://wripple.net/static/img/xrp.png"
-        alt="Wripple Logo"
-        width="45px"
-        style={{ verticalAlign: "middle", marginRight: "2px" }}
-      />
+      <img src="/xrp.png" alt="Wripple Logo" width="45px" style={{ verticalAlign: "middle", marginRight: "2px" }} />
 
       <Text color={color} bold>{`XRP: $${cakePriceUsd.toFixed(3)}`}</Text>
 
       {wXRPPrice !== null && (
         <>
           <img
-            src="https://wripple.net/logo.png"
+            src="/logo.png"
             alt="wXRP Logo"
             width="28px"
             style={{ verticalAlign: "middle", marginLeft: "8px", marginRight: "2px" }}

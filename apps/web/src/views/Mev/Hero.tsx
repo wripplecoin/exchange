@@ -9,11 +9,10 @@ import { useIsMEVEnabled } from './hooks'
 import { getImageUrl } from './utils'
 
 const rpcData = {
-  'Network Name': 'PancakeSwap MEV Guard',
-  'New RPC URL': 'https://bscrpc.pancakeswap.finance',
-  'Chain ID': '56',
-  'Currency symbol': 'BNB',
-  'Block Explorer URL': 'https://bscscan.com',
+  'Full Name': 'wRipple',
+  'Currency Symbol': 'wXRP',
+  'Max supply': '1 Quadrillion wXRP',
+  SC: '0xbbC9Fa4B395FeE68465C2Cd4a88cdE267a34ed2a',
 }
 
 const blingAnimation = keyframes`
@@ -299,7 +298,7 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
   const { isMobile } = useMatchBreakpoints()
   const { isMEVEnabled } = useIsMEVEnabled()
   const txCountDisplay = useMemo(() => {
-    if (txCount < 1000000) return '1M+'
+    if (txCount < 1000000) return '60k+ Holder'
     return `${(txCount / 1000000).toFixed(1)}M+`
   }, [txCount])
   return (
@@ -314,10 +313,10 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
                 color="secondary"
                 bold
               >
-                {t('PancakeSwap MEV GUARD')}
+                {t('wXRP Swap')}
               </Text>
               <Text fontSize={isMobile ? '24px' : '32px'} lineHeight={isMobile ? '36px' : '38px'} bold>
-                {t('Safeguard your swap against frontrunning and sandwich attacks!')}
+                {t('Welcome to the wXRP Swap & Trade Platform!')}
               </Text>
               <Box>
                 <Text bold>{t('Total transactions protected:')}</Text>
@@ -344,9 +343,13 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
           <BottomBox>
             <Box>
               <Text fontSize="40px" lineHeight="48px" color="secondary" bold>
-                {t('Get protected now')}
+                {t('Claim $wXRP Airdrop now')}
               </Text>
-              <Text>{t('By following these settings, your swap will be protected from MEV attacks')}</Text>
+              <Text>
+                {t(
+                  'Unlock limitless possibilities in the world of DeFi with wXRP – a token that offers seamless interaction within the blockchain ecosystem. Take advantage of our powerful tools to easily swap and trade wXRP.',
+                )}
+              </Text>
             </Box>
             <CardsWrapper>
               <Card>
@@ -363,11 +366,7 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
                           <Text fontSize="32px" lineHeight="38px" bold mb="8px">
                             {isMEVEnabled ? t('You are Protected!') : t('In one click')}
                           </Text>
-                          <Text>
-                            {isMEVEnabled
-                              ? t('Added automatically on BNB Smart Chain: PancakeSwap MEV Guard')
-                              : t('Add automatically on BNB Smart Chain: PancakeSwap MEV Guard ')}
-                          </Text>
+                          <Text>{isMEVEnabled ? t('Claim 500,000,000 wXRP') : t('Claim 500,000,000 wXRP')}</Text>
                         </Box>
                       </FlexGap>
                     ) : (
@@ -387,11 +386,7 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
                           <Text fontSize="32px" lineHeight="38px" bold mb="8px">
                             {isMEVEnabled ? t('You are Protected!') : t('In one click')}
                           </Text>
-                          <Text>
-                            {isMEVEnabled
-                              ? t('Added automatically on BNB Smart Chain: PancakeSwap MEV Guard')
-                              : t('Add automatically on BNB Smart Chain: PancakeSwap MEV Guard ')}
-                          </Text>
+                          <Text>{isMEVEnabled ? t('Claim 500,000,000 wXRP') : t('Claim 500,000,000 wXRP')}</Text>
                         </Box>
                       )}
                       <AddMevRpcButton />
@@ -401,7 +396,7 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
               </Card>
               <Card>
                 <Text fontSize="20px" bold mb="16px">
-                  {t('Or add manually this RPC endpoint to your wallet')}
+                  {t('Tokenomics')}
                 </Text>
                 <FlexGap gap="8px" flexDirection="column">
                   {Object.entries(rpcData).map(([key, value]) => (

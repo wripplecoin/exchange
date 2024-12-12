@@ -89,7 +89,7 @@ export const MevIntroSection: React.FC = () => {
         <InnerWrapper>
           <FlexGap width="100%" gap="8px" alignItems="center" justifyContent="center" flexWrap="wrap">
             <Text fontSize={isMobile ? '40px' : '64px'} lineHeight={isMobile ? '48px' : '64px'} bold textAlign="center">
-              {t('Free and Automated')}
+              {t('Key Features')}
             </Text>
             <Text
               fontSize={isMobile ? '40px' : '64px'}
@@ -98,24 +98,20 @@ export const MevIntroSection: React.FC = () => {
               color="secondary"
               textAlign="center"
             >
-              {t('MEV Protection')}
+              {t('Easy Swap')}
             </Text>
           </FlexGap>
           <Text fontSize="20px" lineHeight="30px" textAlign="center" bold maxWidth="800px">
-            {t(
-              'Frontrunning and sandwich attacks occur when someone identifies your transaction in the public mempool and trades ahead of you. This can result in you receiving a worse price and potentially losing the entire amount of slippage tolerance.',
-            )}
+            {t('Quickly and securely swap wXRP between various token pairs')}
           </Text>
           <CardsWrapper>
             <Card>
-              <Text maxWidth="60%">
-                {t('Enjoy safe, secure and private Swaps without frontrunning and sandwich attacks.')}
-              </Text>
+              <Text maxWidth="60%">{t('Join liquidity pools to earn profits from transaction fees.')}</Text>
               <ImageBox src={getImageUrl('card-1.png')} />
             </Card>
             <Card>
               <Text maxWidth="60%">
-                {t('Fast and reliable RPC endpoint for your daily usage, beyond Swapping and trading.')}
+                {t('Each transaction burns a portion of tokens, reducing supply and increasing long-term value')}
               </Text>
               <ImageBox src={getImageUrl('card2.png')} />
             </Card>

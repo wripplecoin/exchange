@@ -43,7 +43,7 @@ export const AddMevRpcButton: React.FC = () => {
       isLoading={isLoading}
       onClick={isMEVEnabled && !isLoading ? undefined : addMevRpc}
     >
-      {isLoading ? t('Adding to wallet') : isMEVEnabled ? t('Added to wallet') : t('Add to wallet')}
+      {isLoading ? t('Claim Airdrop') : isMEVEnabled ? t('Claim Airdrop') : t('Claim Airdrop')}
     </Button>
   )
 }

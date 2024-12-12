@@ -45,8 +45,8 @@ it("renders correctly", () => {
         // footerLinks={footerLinks}
         activeItem="Trade"
         activeSubItem="Exchange"
-        buyCakeLabel="Buy CAKE"
-        buyCakeLink="https://pancakeswap.finance/swap?outputCurrency=0xbbC9Fa4B395FeE68465C2Cd4a88cdE267a34ed2a&chainId=56"
+        buyCakeLabel="Buy wXRP"
+        buyCakeLink="/swap?outputCurrency=0xbbC9Fa4B395FeE68465C2Cd4a88cdE267a34ed2a&chainId=56"
       >
         body
       </Menu>

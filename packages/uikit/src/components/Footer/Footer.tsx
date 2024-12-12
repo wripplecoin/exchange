@@ -17,7 +17,7 @@ import { vars } from "../../css/vars.css";
 import { Button } from "../Button";
 import CakePrice from "../CakePrice/CakePrice";
 import LangSelector from "../LangSelector/LangSelector";
-import { ArrowForwardIcon, LogoWithTextIcon } from "../Svg";
+import { ArrowForwardIcon } from "../Svg";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import { FooterProps } from "./types";
 
@@ -46,7 +46,15 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
     >
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
         <StyledIconMobileContainer display={["block", null, "none"]}>
-          <LogoWithTextIcon width="130px" />
+          {/* <LogoWithTextIcon width="130px" /> */}
+          <img
+            src="/wRipple-white.svg"
+            alt="Wripple Logo"
+            style={{
+              height: "50px",
+              objectFit: "contain",
+            }}
+          />
         </StyledIconMobileContainer>
         <Flex
           order={[2, null, 1]}
@@ -79,7 +87,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
             </StyledList>
           ))}
           <img
-            src="https://wripple.net/static/img/wripple-white.svg"
+            src="/wRipple-white.svg"
             alt="Wripple Logo"
             style={{
               height: "50px",
