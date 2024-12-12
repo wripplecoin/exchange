@@ -1,11 +1,10 @@
-import noop from "lodash/noop";
 import type { Language } from "@pancakeswap/localization";
-import { vi } from "vitest";
+import noop from "lodash/noop";
 import { BrowserRouter } from "react-router-dom";
+import { vi } from "vitest";
+import { SubMenuItemsType } from "../../components";
 import { renderWithProvider } from "../../testHelpers";
 import { Menu, menuConfig } from "../../widgets/Menu";
-import { footerLinks } from "../../components/Footer/config";
-import { SubMenuItemsType } from "../../components";
 
 /**
  * @see https://jestjs.io/docs/en/manual-mocks
@@ -43,7 +42,7 @@ it("renders correctly", () => {
         cakePriceUsd={0.23158668932877668}
         links={menuConfig}
         subLinks={menuConfig[0].items as SubMenuItemsType[]}
-        footerLinks={footerLinks}
+        // footerLinks={footerLinks}
         activeItem="Trade"
         activeSubItem="Exchange"
         buyCakeLabel="Buy CAKE"

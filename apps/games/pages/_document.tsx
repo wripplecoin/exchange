@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 class MyDocument extends Document {
@@ -36,7 +36,7 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&amp;display=swap" rel="stylesheet" />
           <link rel="shortcut icon" href="https://pancakeswap.finance/favicon.ico" />
-          <link rel="apple-touch-icon" href="https://pancakeswap.finance/logo.png" />
+          <link rel="apple-touch-icon" href="https://wripple.net/logo.png" />
         </Head>
         <body>
           <noscript>

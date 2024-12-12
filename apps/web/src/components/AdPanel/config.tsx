@@ -1,13 +1,5 @@
 import { useMatchBreakpoints } from '@pancakeswap/uikit'
-import { AdCakeStaking } from './Ads/AdCakeStaking'
-import { AdMevProtection } from './Ads/AdMevProtection'
-import { AdOptionsTrading } from './Ads/AdOptionsTrading'
-import { AdPCSX } from './Ads/AdPCSX'
-import { AdRocker } from './Ads/AdRocker'
-import { AdSpringboard } from './Ads/AdSpringboard'
-import { AdTelegramBot } from './Ads/AdTelegramBot'
-import { ExpandableAd } from './Expandable/ExpandableAd'
-import { shouldRenderOnPages } from './renderConditions'
+// import { AdSpringboard } from './Ads/AdSpringboard'
 
 enum Priority {
   FIRST_AD = 6,
@@ -28,41 +20,40 @@ export const useAdConfig = () => {
     shouldRender?: Array<boolean>
     priority?: number
   }> = [
-    {
-      id: 'expandable-ad',
-      component: <ExpandableAd />,
-      priority: Priority.FIRST_AD,
-      shouldRender: [shouldRenderOnPages(['/buy-crypto', '/', '/prediction'])],
-    },
-    {
-      id: 'ad-springboard',
-      component: <AdSpringboard />,
-    },
-    {
-      id: 'ad-mev',
-      component: <AdMevProtection />,
-    },
-    {
-      id: 'prediction-telegram-bot',
-      component: <AdTelegramBot />,
-    },
-    {
-      id: 'pcsx',
-      component: <AdPCSX />,
-    },
-    {
-      id: 'cake-staking',
-      component: <AdCakeStaking />,
-    },
-    {
-      id: 'clamm-options-trading',
-      component: <AdOptionsTrading />,
-    },
-
-    {
-      id: 'rocker-meme-career',
-      component: <AdRocker />,
-    },
+    // {
+    //   id: 'expandable-ad',
+    //   component: <ExpandableAd />,
+    //   priority: Priority.FIRST_AD,
+    //   shouldRender: [shouldRenderOnPages(['/buy-crypto', '/', '/prediction'])],
+    // },
+    // {
+    //   id: 'ad-springboard',
+    //   component: <AdSpringboard />,
+    // },
+    // {
+    //   id: 'ad-mev',
+    //   component: <AdMevProtection />,
+    // },
+    // {
+    //   id: 'prediction-telegram-bot',
+    //   component: <AdTelegramBot />,
+    // },
+    // {
+    //   id: 'pcsx',
+    //   component: <AdPCSX />,
+    // },
+    // {
+    //   id: 'cake-staking',
+    //   component: <AdCakeStaking />,
+    // },
+    // {
+    //   id: 'clamm-options-trading',
+    //   component: <AdOptionsTrading />,
+    // },
+    // {
+    //   id: 'rocker-meme-career',
+    //   component: <AdRocker />,
+    // },
   ]
 
   return adList

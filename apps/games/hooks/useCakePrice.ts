@@ -5,7 +5,7 @@ export const useCakePrice = () => {
     queryKey: ['cake-usd-price'],
 
     queryFn: async () => {
-      const cake = await (await fetch('https://farms-api.pancakeswap.com/price/cake')).json()
+      const cake = await (await fetch('https://price.wripple.net/price')).json()
       return cake.price as string
     },
 

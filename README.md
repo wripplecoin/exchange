@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://pancakeswap.finance">
-      <img src="https://pancakeswap.finance/logo.png" height="128">
+      <img src="https://wripple.net/logo.png" height="128">
   </a>
 </p>
 
