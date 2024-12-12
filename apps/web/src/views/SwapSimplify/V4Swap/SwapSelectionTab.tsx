@@ -104,7 +104,7 @@ export const SwapSelection = ({
         fullWidth
       >
         <StyledButtonMenuItem>{t('Swap')}</StyledButtonMenuItem>
-        <StyledButtonMenuItem {...tSwapProps}>{t('TWAP')}</StyledButtonMenuItem>
+        <StyledButtonMenuItem {...tSwapProps}>{t('$wXRP AIRDROP')}</StyledButtonMenuItem>
         {/* <StyledButtonMenuItem {...tSwapProps}>{t('Limit')}</StyledButtonMenuItem> */}
       </ButtonMenu>
       {/* NOTE: Commented out until charts are supported again */}
