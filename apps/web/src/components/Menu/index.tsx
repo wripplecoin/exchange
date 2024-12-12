@@ -1,11 +1,9 @@
 import { languageList, useTranslation } from '@pancakeswap/localization'
 import { Text, Menu as UikitMenu, footerLinks, useModal } from '@pancakeswap/uikit'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
-import { usePhishingBanner } from '@pancakeswap/utils/user'
 import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
 import USCitizenConfirmModal from 'components/Modal/USCitizenConfirmModal'
 import { NetworkSwitcher } from 'components/NetworkSwitcher'
-import PhishingWarningBanner from 'components/PhishingWarningBanner'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useCakePrice } from 'hooks/useCakePrice'
 import { usePerpUrl } from 'hooks/usePerpUrl'
@@ -79,7 +77,7 @@ const Menu = (props) => {
     },
     [perpConfirmed, optionsConfirmed, onPerpConfirmModalPresent, onOptionsConfirmModalPresent],
   )
-  const [showPhishingWarningBanner] = usePhishingBanner()
+  // const [showPhishingWarningBanner] = usePhishingBanner()
 
   const menuItems = useMenuItems({
     onClick: onSubMenuClick,
@@ -109,17 +107,13 @@ const Menu = (props) => {
       rightSide={
         <>
           <GlobalSettings mode={SettingsMode.GLOBAL} />
-          {enabled && (
-            <Suspense fallback={null}>
-              <Notifications />
-            </Suspense>
-          )}
+          {enabled && <Suspense fallback={null}>{/* <Notifications /> */}</Suspense>}
           <NetworkSwitcher />
           <UserMenu />
         </>
       }
       chainId={chainId}
-      banner={showPhishingWarningBanner && typeof window !== 'undefined' && <PhishingWarningBanner />}
+      // banner={showPhishingWarningBanner && typeof window !== 'undefined' && <PhishingWarningBanner />}
       isDark={isDark}
       toggleTheme={toggleTheme}
       currentLang={currentLanguage.code}
@@ -134,7 +128,7 @@ const Menu = (props) => {
           ? []
           : activeSubMenuItem?.items ?? activeMenuItem?.items)
       }
-      footerLinks={getFooterLinks}
+      // footerLinks={getFooterLinks}
       activeItem={activeMenuItem?.href}
       activeSubItem={activeSubMenuItem?.href}
       activeSubItemChildItem={activeSubChildMenuItem?.href}
