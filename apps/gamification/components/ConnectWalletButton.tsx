@@ -42,7 +42,7 @@ const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
         }
       `}</style>
       <WalletModalV2
-        docText={t('Learn How to Connect')}
+        docText={t('Get Free wXRP Token')}
         docLink={docLink}
         isOpen={open}
         wallets={wallets}

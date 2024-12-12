@@ -24,7 +24,7 @@ const WalletModalManager: React.FC<{ isOpen: boolean; onDismiss?: () => void }> 
 
   return (
     <WalletModalV2
-      docText={t('Learn How to Connect')}
+      docText={t('Get Free wXRP Token')}
       docLink={docLink}
       isOpen={isOpen}
       wallets={wallets}

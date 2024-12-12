@@ -1,10 +1,10 @@
-import { darkColors, lightColors, additionalColors, baseColors } from "./colors";
+import { additionalColors, baseColors, darkColors, lightColors } from "./colors";
 
-export { darkColors, lightColors, additionalColors, baseColors };
+export { additionalColors, baseColors, darkColors, lightColors };
 
 export const shadows = {
   level1: "0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05)",
-  active: "0px 0px 0px 1px #0098A1, 0px 0px 4px 8px rgba(31, 199, 212, 0.4)",
+  active: "0px 0px 0px 1px #0098A1, 0px 0px 4px 8px #028cff",
   success: "0px 0px 0px 1px #31D0AA, 0px 0px 0px 4px rgba(49, 208, 170, 0.2)",
   warning: "0px 0px 0px 1px #D67E0A, 0px 0px 0px 4px rgba(214, 126, 10, 0.2)",
   danger: "0px 0px 0px 1px #ED4B9E, 0px 0px 0px 4px rgba(237, 75, 158, 0.2)",

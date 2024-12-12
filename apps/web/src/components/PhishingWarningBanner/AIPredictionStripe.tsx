@@ -84,7 +84,7 @@ export const AIPrediction = ({
           {t('Participate Now')}
           <ArrowForwardIcon width="12px" color="primary" style={{ marginRight: '-8px' }} />
         </Link>
-        <VerticalDivider bg="rgba(31, 199, 212, 0.4)" />
+        <VerticalDivider bg="#028cff" />
         <Link
           external
           fontSize={['12px', '12px', '12px']}
