@@ -8,9 +8,9 @@ import {
 } from '@pancakeswap/utils/formatBalance'
 import BN from 'bignumber.js'
 import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
 import { Tooltips } from 'views/CakeStaking/components/Tooltips'
 import { useCurrentBlockTimestamp } from 'views/CakeStaking/hooks/useCurrentBlockTimestamp'
-import relativeTime from 'dayjs/plugin/relativeTime'
 import { useCurrentEpochEnd, useEpochOnTally, useNextEpochStart } from '../hooks/useEpochTime'
 import { useGaugesTotalWeight } from '../hooks/useGaugesTotalWeight'
 
