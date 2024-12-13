@@ -48,7 +48,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
         <StyledIconMobileContainer display={["block", null, "none"]}>
           {/* <LogoWithTextIcon width="130px" /> */}
           <img
-            src="/wRipple-white.svg"
+            src="wripple-white.svg"
             alt="Wripple Logo"
             style={{
               height: "50px",
@@ -87,7 +87,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
             </StyledList>
           ))}
           <img
-            src="/wRipple-white.svg"
+            src="wripple-white.svg"
             alt="Wripple Logo"
             style={{
               height: "50px",

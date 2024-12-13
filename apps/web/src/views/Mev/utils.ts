@@ -1,6 +1,6 @@
 import { RPCResponse } from './types'
 
-const AD_ASSETS_URL = 'https://assets.pancakeswap.finance/web/mev'
+const AD_ASSETS_URL = ''
 export const getImageUrl = (asset: string) => `${AD_ASSETS_URL}/${asset}`
 
 export const fetchRPCData = async (method: 'stat_txCount' | 'stat_walletCount'): Promise<number> => {

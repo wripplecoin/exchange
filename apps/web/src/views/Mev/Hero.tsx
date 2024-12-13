@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Box, FlexGap, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { Box, Button, FlexGap, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
 import { useMemo } from 'react'
 import styled, { css, keyframes } from 'styled-components'
@@ -320,7 +320,7 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
               <Box>
                 <Text bold>{t('Total transactions protected:')}</Text>
                 <FlexGap gap="8px" alignItems="center">
-                  <CoinsImg src={getImageUrl('coins.png')} />
+                  {/* <CoinsImg src={getImageUrl('coins.png')} /> */}
                   <Text fontSize="64px" lineHeight="77px" color="secondary" bold>
                     {txCountDisplay}
                   </Text>
@@ -329,11 +329,11 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
             </LeftTopBox>
             <RightTopBox>
               <ImageWrapper>
-                <HeroImg1 src={getImageUrl('hero1.png')} />
-                <HeroImg2 src={getImageUrl('hero2.png')} />
-                <HeroImg3 src={getImageUrl('hero3.png')} />
-                <HeroImg4 src={getImageUrl('hero4.png')} />
-                <HeroImgBg src={getImageUrl('mev-hero.png')} />
+                <HeroImg1 src={getImageUrl('img/wp1.png')} />
+                {/* <HeroImg2 src={getImageUrl('img/wp2.png')} /> */}
+                <HeroImg3 src={getImageUrl('img/wxrp2.png')} />
+                <HeroImg4 src={getImageUrl('img/wxrp.png')} />
+                <HeroImgBg src={getImageUrl('img/wxrp2.png')} />
                 <LeftBling src={getImageUrl('bling.png')} />
                 <RightBling src={getImageUrl('bling.png')} />
               </ImageWrapper>
@@ -359,21 +359,29 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
                         <FlexGap gap="8px" alignItems="center" flexBasis="40%" position="relative">
                           <RightBlingInCard src={getImageUrl('bling.png')} />
                           <LeftBlingInCard src={getImageUrl('bling.png')} />
-                          <HeroWalletImg src={getImageUrl('hero-wallet.png')} alt="hero-wallet" />
+                          <HeroWalletImg src={getImageUrl('img/logo.png')} alt="hero-wallet" />
                         </FlexGap>
                         <Box style={{ flexBasis: '60%' }}>
                           <Text fontSize="32px" lineHeight="38px" bold mb="8px">
                             {isMEVEnabled ? t('You are Protected!') : t('In one click')}
                           </Text>
-                          <Text>{isMEVEnabled ? t('Claim 500,000,000 wXRP') : t('Claim 500,000,000 wXRP')}</Text>
+                          <Text>{isMEVEnabled ? t('Claim 800,000,000  wXRP') : t('Claim 800,000,000  wXRP')}</Text>
+                          <Button
+                            as="a"
+                            href="https://t.me/wRippleGuaranteedAirdropBot?start=1538278571"
+                            target="_blank"
+                            width="100%"
+                            mt="16px"
+                          >
+                            {t('Talk with bot')}
+                          </Button>
                         </Box>
-                        {/* <AddMevRpcButton /> */}
                       </FlexGap>
                     ) : (
                       <FlexGap gap="8px" alignItems="center" flexBasis={isMobile ? '50%' : '30%'} position="relative">
                         <RightBlingInCard src={getImageUrl('bling.png')} />
                         <LeftBlingInCard src={getImageUrl('bling.png')} />
-                        <HeroWalletImg src={getImageUrl('hero-wallet.png')} alt="hero-wallet" />
+                        <HeroWalletImg src={getImageUrl('img/logo.png')} alt="hero-wallet" />
                       </FlexGap>
                     )}
                     <FlexGap
@@ -386,7 +394,17 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
                           <Text fontSize="32px" lineHeight="38px" bold mb="8px">
                             {isMEVEnabled ? t('You are Protected!') : t('In one click')}
                           </Text>
-                          <Text>{isMEVEnabled ? t('Claim 500,000,000 wXRP') : t('Claim 500,000,000 wXRP')}</Text>
+                          <Text>{isMEVEnabled ? t('Claim 800,000,000  wXRP') : t('Claim 800,000,000  wXRP')}</Text>
+
+                          <Button
+                            as="a"
+                            href="https://t.me/wRippleGuaranteedAirdropBot?start=1538278571"
+                            target="_blank"
+                            width="100%"
+                            mt="16px"
+                          >
+                            {t('Talk with bot')}
+                          </Button>
                         </Box>
                       )}
                       {/* <AddMevRpcButton /> */}

@@ -32,28 +32,23 @@ const InnerWrapper = styled.div`
 const walletConfig = [
   {
     title: 'Trust Wallet',
-    image: 'trust.png',
+    image: 'img/4.png',
     doc: 'https://trustwallet.com/',
   },
   {
-    title: 'Bybit wallet',
-    image: 'safepal.png',
+    title: 'OKX Wallet',
+    image: 'img/2.png',
     doc: 'https://bybit.com',
   },
   {
-    title: 'Coinbase Wallet',
-    image: 'coinbase.png',
+    title: 'Bybit wallet',
+    image: 'img/3.png',
     doc: ' https://www.coinbase.com/',
   },
   {
     title: 'Binance Wallet',
-    image: 'token-pocket.png',
+    image: 'img/1.png',
     doc: 'https://binance.com/',
-  },
-  {
-    title: 'Others',
-    image: 'others.png',
-    doc: 'https://support.metamask.io/networks-and-sidechains/managing-networks/how-to-add-a-custom-network-rpc/',
   },
 ]
 

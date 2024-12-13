@@ -107,22 +107,22 @@ export const MevIntroSection: React.FC = () => {
           <CardsWrapper>
             <Card>
               <Text maxWidth="60%">{t('Join liquidity pools to earn profits from transaction fees.')}</Text>
-              <ImageBox src={getImageUrl('card-1.png')} />
+              <ImageBox src={getImageUrl('img/card1.png')} />
             </Card>
             <Card>
               <Text maxWidth="60%">
                 {t('Each transaction burns a portion of tokens, reducing supply and increasing long-term value')}
               </Text>
-              <ImageBox src={getImageUrl('card2.png')} />
+              <ImageBox src={getImageUrl('img/card2.png')} />
             </Card>
             <Card>
               <Text maxWidth="60%">{t('Easy to set up and completely free solution for all kinds of Swappers.')}</Text>
-              <ImageBox src={getImageUrl('card3.png')} />
+              <ImageBox src={getImageUrl('img/card3.png')} />
             </Card>
           </CardsWrapper>
         </InnerWrapper>
       </Wrapper>
-      <WaveBg src={getImageUrl(theme.isDark ? 'intro-wave-dark.png' : 'intro-wave.png')} />
+      {/* <WaveBg src={getImageUrl(theme.isDark ? 'intro-wave-dark.png' : 'intro-wave.png')} /> */}
     </MevIntroSectionWrapper>
   )
 }

@@ -95,7 +95,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
   const isMounted = useIsMounted();
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(typeof window === "undefined" ? 0 : window.pageYOffset);
-  const logoSrc = isDark ? "/wripple-white.svg" : "/wripple-black.svg";
+  const logoSrc = isDark ? "wripple-white.svg" : "wripple-black.svg";
 
   const topBannerHeight = isMobile ? TOP_BANNER_HEIGHT_MOBILE : TOP_BANNER_HEIGHT;
 
@@ -150,7 +150,6 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
             {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
             <StyledNav>
               <Flex>
-                {/* Logo hiển thị và thay đổi linh hoạt */}
                 <a href={homeLink?.href ?? "/mev"} style={{ display: "inline-block" }}>
                   <img
                     src={logoSrc}
