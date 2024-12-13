@@ -45,7 +45,7 @@ export const swapFAQConfig: FAQConfig = (t) => ({
           <ul style={{ overflow: 'auto' }}>
             <StyledFlex flexWrap="wrap" flexGrow={0}>
               {t('Use the')}
-              <Link m="0 5px" href="https://pancakeswap.finance/buy-crypto" color="primary">
+              <Link m="0 5px" href="https://binance.com" color="primary">
                 {t('Buy Crypto')}
               </Link>
               {t('feature to buy.')}

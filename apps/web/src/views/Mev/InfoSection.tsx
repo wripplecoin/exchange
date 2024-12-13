@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Box, Button, FlexGap, LinkExternal, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { Box, FlexGap, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
 import { useMemo } from 'react'
 import { styled } from 'styled-components'
@@ -105,7 +105,7 @@ export const InfoSection: React.FC<{ walletCount: number }> = ({ walletCount }) 
               </FlexGap>
             ))}
           </FlexGap>
-          <FlexGap flexDirection="column" gap="24px" justifyContent="center" alignItems="center">
+          {/* <FlexGap flexDirection="column" gap="24px" justifyContent="center" alignItems="center">
             <Text>{t('or')}</Text>
             <Button
               onClick={() => {
@@ -119,7 +119,7 @@ export const InfoSection: React.FC<{ walletCount: number }> = ({ walletCount }) 
             >
               {t('View FAQ docs')}
             </Button>
-          </FlexGap>
+          </FlexGap> */}
         </InnerWrapper>
       </Wrapper>
     </InfoSectionWrapper>

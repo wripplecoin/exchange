@@ -77,7 +77,7 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
               currency: native?.symbol,
             })}
           </Text>
-          <InternalLink href="/buy-crypto" onClick={() => onDismiss?.()}>
+          <InternalLink href="https://binance.com" onClick={() => onDismiss?.()}>
             <Button height="30px">{t('Buy %currency%', { currency: native?.symbol })}</Button>
           </InternalLink>
         </FlexGap>
@@ -111,7 +111,7 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
                 currency: native.symbol,
               })}
             </Text>
-            <InternalLink href="/buy-crypto" onClick={() => onDismiss?.()}>
+            <InternalLink href="https://binance.com" onClick={() => onDismiss?.()}>
               <Text color="primary">
                 {t('You need %currency% for transaction fees.', {
                   currency: native.symbol,

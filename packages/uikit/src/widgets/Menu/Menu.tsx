@@ -95,6 +95,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
   const isMounted = useIsMounted();
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(typeof window === "undefined" ? 0 : window.pageYOffset);
+  const logoSrc = isDark ? "/wripple-white.svg" : "/wripple-black.svg";
 
   const topBannerHeight = isMobile ? TOP_BANNER_HEIGHT_MOBILE : TOP_BANNER_HEIGHT;
 
@@ -149,10 +150,10 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
             {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
             <StyledNav>
               <Flex>
-                {/* {logoComponent ?? <Logo href={homeLink?.href ?? "/mev"} />} */}
-                <a href="/mev" style={{ display: "inline-block" }}>
+                {/* Logo hiển thị và thay đổi linh hoạt */}
+                <a href={homeLink?.href ?? "/mev"} style={{ display: "inline-block" }}>
                   <img
-                    src="/wripple-black.svg"
+                    src={logoSrc}
                     alt="Wripple Logo"
                     style={{
                       paddingTop: "2px",
@@ -162,6 +163,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                     }}
                   />
                 </a>
+                {/* Menu Items */}
                 <AtomBox display={{ xs: "none", lg: "block" }}>
                   <MenuItems
                     ml="24px"
@@ -176,6 +178,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                 <AtomBox mr="12px" display={{ xs: "none", xxl: "block" }}>
                   <CakePrice chainId={chainId} showSkeleton={false} cakePriceUsd={cakePriceUsd} />
                 </AtomBox>
+
                 <Box mt="4px">
                   <LangSelector
                     currentLang={currentLang}
@@ -186,6 +189,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                     hideLanguage
                   />
                 </Box>
+
                 {rightSide}
               </Flex>
             </StyledNav>

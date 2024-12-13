@@ -25,6 +25,8 @@ export const AddMevRpcButton: React.FC = () => {
   if (!account) {
     return <ConnectWalletButton withIcon />
   }
+
+  // Ensure the button is visible when the wallet is connected and loading is finished
   if (isMEVStatusLoading || !shouldShowMEVToggle) {
     return null
   }

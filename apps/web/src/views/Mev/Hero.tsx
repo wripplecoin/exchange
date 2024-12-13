@@ -3,7 +3,6 @@ import { Box, FlexGap, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
 import { useMemo } from 'react'
 import styled, { css, keyframes } from 'styled-components'
-import { AddMevRpcButton } from './AddMevRpcButton'
 import { useIsMEVEnabled } from './hooks'
 
 import { getImageUrl } from './utils'
@@ -368,6 +367,7 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
                           </Text>
                           <Text>{isMEVEnabled ? t('Claim 500,000,000 wXRP') : t('Claim 500,000,000 wXRP')}</Text>
                         </Box>
+                        {/* <AddMevRpcButton /> */}
                       </FlexGap>
                     ) : (
                       <FlexGap gap="8px" alignItems="center" flexBasis={isMobile ? '50%' : '30%'} position="relative">
@@ -389,7 +389,7 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
                           <Text>{isMEVEnabled ? t('Claim 500,000,000 wXRP') : t('Claim 500,000,000 wXRP')}</Text>
                         </Box>
                       )}
-                      <AddMevRpcButton />
+                      {/* <AddMevRpcButton /> */}
                     </FlexGap>
                   </FlexGap>
                 </Box>
