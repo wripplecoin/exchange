@@ -4,7 +4,7 @@ import { FlexGap } from '@pancakeswap/uikit'
 import { useUserSlippage } from '@pancakeswap/utils/user'
 import { SwapUIV2 } from '@pancakeswap/widgets-internal'
 import { useTokenRisk } from 'components/AccessRisk'
-import { RiskDetailsPanel, useShouldRiskPanelDisplay } from 'components/AccessRisk/SwapRevampRiskDisplay'
+import { useShouldRiskPanelDisplay } from 'components/AccessRisk/SwapRevampRiskDisplay'
 import { useCurrency } from 'hooks/Tokens'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useCurrencyUsdPrice } from 'hooks/useCurrencyUsdPrice'
@@ -12,7 +12,6 @@ import { useMemo } from 'react'
 import { Field } from 'state/swap/actions'
 import { useSwapState } from 'state/swap/hooks'
 import { logger } from 'utils/datadog'
-import { MevToggle } from 'views/Mev/MevToggle'
 import { SwapType } from '../../Swap/types'
 import { useIsWrapping } from '../../Swap/V3Swap/hooks'
 import { useAllTypeBestTrade } from '../../Swap/V3Swap/hooks/useAllTypeBestTrade'
@@ -20,7 +19,6 @@ import { useBuyCryptoInfo } from '../hooks/useBuyCryptoInfo'
 import { useIsPriceImpactTooHigh } from '../hooks/useIsPriceImpactTooHigh'
 import { useUserInsufficientBalance } from '../hooks/useUserInsufficientBalance'
 import { ButtonAndDetailsPanel } from './ButtonAndDetailsPanel'
-import { BuyCryptoPanel } from './BuyCryptoPanel'
 import { CommitButton } from './CommitButton'
 import { FormMain } from './FormMainV4'
 import { PricingAndSlippage } from './PricingAndSlippage'
@@ -135,8 +133,8 @@ export function V4SwapForm() {
           isUserInsufficientBalance={isUserInsufficientBalance}
         />
       </SwapUIV2.SwapTabAndInputPanelWrapper>
-      {shouldShowBuyCrypto && <BuyCryptoPanel link={buyCryptoLink} />}
-      {(shouldRiskPanelDisplay || isPriceImpactTooHigh || isSlippageTooHigh) && (
+      {/* {shouldShowBuyCrypto && <BuyCryptoPanel link={buyCryptoLink} />} */}
+      {/* {(shouldRiskPanelDisplay || isPriceImpactTooHigh || isSlippageTooHigh) && (
         <RiskDetailsPanel
           isPriceImpactTooHigh={isPriceImpactTooHigh}
           isSlippageTooHigh={isSlippageTooHigh}
@@ -145,7 +143,7 @@ export function V4SwapForm() {
           token0RiskLevelDescription={token0Risk.data?.riskLevelDescription}
           token1RiskLevelDescription={token1Risk.data?.riskLevelDescription}
         />
-      )}
+      )} */}
       <ButtonAndDetailsPanel
         swapCommitButton={
           <CommitButton order={bestOrder} tradeLoaded={tradeLoaded} tradeError={tradeError} {...commitHooks} />
@@ -182,7 +180,7 @@ export function V4SwapForm() {
         }
         tradeDetails={<TradeDetails loaded={tradeLoaded} order={bestOrder} />}
         shouldRenderDetails={Boolean(executionPrice) && Boolean(bestOrder) && !isWrapping && !tradeError}
-        mevSlot={<MevToggle />}
+        // mevSlot={<MevToggle />}
       />
     </SwapUIV2.SwapFormWrapper>
   )
