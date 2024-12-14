@@ -430,7 +430,7 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
           </BottomBox>
         </InnerWrapper>
       </Wrapper>
-      <WaveBg src={getImageUrl(theme.isDark ? 'hero-wave-dark.png' : 'hero-wave.png')} />
+      {/* <WaveBg src={getImageUrl(theme.isDark ? 'hero-wave-dark.png' : 'hero-wave.png')} /> */}
     </HeroWrapper>
   )
 }
